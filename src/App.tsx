@@ -7,7 +7,7 @@ function App() {
   return (
     <main className="container p-10">
       <button className="bg-gray-200 rounded-md border p-2" type="button" onClick={() => setIsDialogOpen(true)}>Open</button>
-      <ModalDialog isOpen={isDialogOpen} setIsOpen={setIsDialogOpen} title="Dialog" description="Dialog description" />
+      <ModalDialog isOpen={isDialogOpen} setIsOpen={setIsDialogOpen} />
     </main>
   )
 }
