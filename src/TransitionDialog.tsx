@@ -5,7 +5,7 @@ interface Props {
     setIsOpen: (value: boolean) => void;
 }
 
-export default function ModalDialog({ isOpen, setIsOpen }: Props) {
+export default function TransitionDialog({ isOpen, setIsOpen }: Props) {
     return (
       <Dialog
         open={isOpen}

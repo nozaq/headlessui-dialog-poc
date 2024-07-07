@@ -1,11 +1,23 @@
 import test, { expect } from "@playwright/test";
 
-test("show dialog", async ({ page }) => {
+test("show dialog w/ transition", async ({ page }) => {
     await page.goto("/");
 
     const dialog = page.getByRole("dialog");
 
-    await page.getByRole("button", { name: "Open" }).click();
+    await page.getByRole("button", { name: "Open w/ Transition" }).click();
+    await expect(dialog).toBeVisible();
+
+    await page.getByRole("button", { name: "Close" }).click();
+    await expect(dialog).toBeHidden();
+});
+
+test("show dialog w/o transition", async ({ page }) => {
+    await page.goto("/");
+
+    const dialog = page.getByRole("dialog");
+
+    await page.getByRole("button", { name: "Open w/o transition" }).click();
     await expect(dialog).toBeVisible();
 
     await page.getByRole("button", { name: "Close" }).click();
