@@ -9,9 +9,10 @@ $ npx playwright install --with-deps
 $ npm test
 ```
 
-The following two test cases are defined in [tests/dialog.spec.ts](./tests/dialog.spec.ts), and both are supposed to pass.
+The following three test cases are defined in [tests/dialog.spec.ts](./tests/dialog.spec.ts). All cases are supposed to pass.
 
 1. show dialog w/ transition
+1. show dialog w/ transition, wait for opacity to be 1
 1. show dialog w/o transition
 
 Inside the test page, select all projects(chromium, firefox and webkit) and run all test cases.
